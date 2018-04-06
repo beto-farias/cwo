@@ -1,0 +1,113 @@
+<resources>
+    <string name="facebook_app_id">2007330992851362</string>
+    <string name="app_name">CWO</string>
+    <string name="user_name">Nombre Completo</string>
+    <string name="user_password">Contraseña</string>
+    <string name="user_mail">Correo electrónico</string>
+    <string name="ico_logo">Logo</string>
+    <string name="ico">Ico</string>
+    <string name="create_account">Crear registro</string>
+    <string name="i_have_an_account">Ya tengo una cuenta</string>
+    <string name="login">Ingresar</string>
+    <string name="i_cant_remember_password">No recuerdo mi contraseña</string>
+    <string name="recover_password">Recuperar contraseña</string>
+    <string name="login_with_facebook">Ingresar con facebook</string>
+    <string name="lbl_get_premium">Desbloquear Contenido Premium</string>
+    <string name="lbl_day_celebrity">Celebridad del día</string>
+    <string name="lbl_celebrity_name">Javier Robles</string>
+    <string name="lbl_programs">Programas de entrenamiento</string>
+    <string name="lbl_aviso_privacidad">Aviso de privacidad</string>
+    <string name="lbl_lit_video">Desafio CWO</string>
+    <string name="lbl_video_title">Estiramientos ella</string>
+    <string name="lbl_video_tiempo">3 Min</string>
+
+    <string name="lbl_config">Configuraciones</string>
+    <string name="lbl_cerrar_sesion">Cerrar sesión</string>
+    <string name="lbl_venta_title_row_1">COMIENZA A SENTIRTE MÁS</string>
+    <string name="lbl_venta_title_row_2">SALUDABLE Y SEXY QUE ANTES</string>
+    <string name="lbl_venta_sub_title_row_1">Obten acceso a todos los entrenamientos y</string>
+    <string name="lbl_venta_sub_title_row_2">desafíos de estrellas al contratar el servicio</string>
+
+    <string name="lbl_sale_item_3m">3 meses</string>
+    <string name="lbl_sale_item_3m_price">--</string>
+
+    <string name="lbl_sale_item_12m">12 meses</string>
+    <string name="lbl_sale_item_12m_price">--</string>
+
+    <string name="lbl_sale_item_24m">24 meses</string>
+    <string name="lbl_sale_item_24m_price">MX$ 255</string>
+
+    <string name="lbl_montly">Mensuales</string>
+
+    <string name="lbl_sale_buy">Contratar</string>
+
+    <string name="training_completed">¡Entrenamiento completado!</string>
+    <string name="how_you_feel">¿Cómo te sentiste despúes del entrenamiento?</string>
+    <string name="lbl_share_facebook">Compartir en Facebook</string>
+
+    <string name="lbl_empty"></string>
+    <string name="exit">Salir</string>
+
+    <string name="no_internet_access">No hay acceso a internet</string>
+    <string name="no_email_error">Debe indicar el correo elecrónico</string>
+    <string name="no_password_error">Debe indicar la contraseña</string>
+    <string name="no_user_name_error">Debe indicar su nombre</string>
+
+    <string name="password_recover_mail_send">Se le envío un correo para actualizar su contraseña</string>
+    <string name="password_recover_mail_send_error">El correo indicado no se encuentra registrado</string>
+
+
+    <string name="app_update_title">Actualización de la aplicación</string>
+    <string name="app_update_question">Hay una nueva versión de la aplicación ¿Quieres actualizar?</string>
+
+    <string name="loading_video_title">Por favor espera</string>
+    <string name="loading_video_message">Cargando video</string>
+
+    <string name="download_title">Descarga %1$s</string>
+    <string name="download_body">Descargando %1s</string>
+
+    <string name="exercice_office_workout">Office Workout</string>
+    <string name="exercice_challenges">Desafios CWO</string>
+    <string name="exercice_streching">Estiramientos</string>
+    <string name="exercice_tactfit">TACTFIT</string>
+
+    <string name="days_in_a_row">Días sin parar</string>
+    <string name="cero">0</string>
+
+    <string name="control_resume">Reanudar</string>
+    <string name="control_restart">Reiniciar</string>
+    <string name="control_stop">Detener</string>
+
+
+    <string name="start_now_for_only">Comienza hoy por sólo</string>
+    <string name="txt_continue">Continuar</string>
+    <string name="txt_start_value">--</string>
+    <string name="txt_continue_without_subscription">Continuar sin suscripción</string>
+
+
+    <string name="txt_aviso_privacidad">Aquí va el aviso de privacidad</string>
+    <string name="title_activity_left_menu">LeftMenuActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_drawer_test">DrawerTestActivity</string>
+    <string name="lbl_debug">Debug</string>
+    <string name="lbl_downloaded_videos">Offline videos</string>
+    <string name="download_on_downloading">Ya está descargando un video, espere a terminar para descargar otro</string>
+    <string name="download_allready_downloaded">Ya ha descargado el video</string>
+    <string name="are_you_shure_you_whant_to_exit">¿Estás seguro que quieres salir?</string>
+    <string name="are_you_shure_you_whant_to_close_session">¿Estás seguro que quieres cerrar la sesión?</string>
+    <string name="are_you_shure_you_whant_to_delete_video">¿Estás seguro que quieres eliminar el video?</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+
+    <string name="rutinas_realizadas">Total de rutinas</string>
+    <string name="rutinas_realizadas_count">%1$s rutinas</string>
+
+    <string name="lbl_mi_ejercicio">Actividad</string>
+    <string name="precio_total">%1$s %2$s precio total de la suscripción</string>
+    <string name="payment_disclaimer">*Se renovará automáticamente por el periodo indicado</string>
+
+</resources>

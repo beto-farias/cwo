@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#262262</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="color_brillante">#f900c2</color>
+    <color name="color_brillante_b">#1c75bc</color>
+
+    <color name="color_fondo">#E6FFFE</color>
+
+    <color name="bg_blue">#1c75bc</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="text_color">#262262</color>
+</resources>

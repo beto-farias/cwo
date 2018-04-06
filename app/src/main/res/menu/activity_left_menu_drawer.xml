@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+
+
+    <!--
+    <item
+        android:id="@+id/nav_config"
+        android:title="@string/lbl_config" />
+        -->
+
+    <!--
+    <item
+        android:id="@+id/nav_aviso_privacidad"
+        android:title="@string/lbl_aviso_privacidad" />
+        -->
+
+    <!-- Desactivada para esta version
+    <item
+        android:id="@+id/nav_downloaded_videos"
+        android:title="@string/lbl_downloaded_videos" />
+    -->
+
+    <item
+        android:id="@+id/nav_mi_ejercicio"
+        android:icon="@drawable/ic_equalizer_black_24dp"
+        android:title="@string/lbl_mi_ejercicio" />
+
+    <item
+        android:id="@+id/nav_cerrar_sesion"
+        android:icon="@drawable/ic_exit_24p"
+        android:title="@string/lbl_cerrar_sesion" />
+
+
+</menu>

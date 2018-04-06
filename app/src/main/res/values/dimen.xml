@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright 2013 The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<resources>
+    <dimen name="action_button_min_width">56dp</dimen>
+    <dimen name="indeterminate_progress_size">32dp</dimen>
+
+
+    <dimen name="logo_size">100dp</dimen>
+    <dimen name="ico_size">50dp</dimen>
+    <dimen name="ico_size_s">20dp</dimen>
+
+    <dimen name="padding_xs">5dp</dimen>
+    <dimen name="padding_sm">10dp</dimen>
+    <dimen name="padding_md">20dp</dimen>
+    <dimen name="padding_lg">30dp</dimen>
+
+    <dimen name="img_thumnail">90dp</dimen>
+
+    <dimen name="preview_placeholder">200dp</dimen>
+
+    <dimen name="icon_width">200dp</dimen>
+    <dimen name="icon_height">200dp</dimen>
+
+    <dimen name="icon_padding">10dp</dimen>
+
+    <dimen name="card_height">240dp</dimen>
+
+    <dimen name="activity_vertical_margin">10dp</dimen>
+    <dimen name="activity_left_margin">10dp</dimen>
+    <dimen name="activity_right_margin">10dp</dimen>
+
+    <dimen name="title">15sp</dimen>
+    <dimen name="title_large">30sp</dimen>
+    <dimen name="table_cell_title">17sp</dimen>
+    <dimen name="table_cell_sub_title">23sp</dimen>
+
+    <dimen name="font_size_xs">10sp</dimen>
+    <dimen name="font_size_sm">20sp</dimen>
+    <dimen name="font_size_md">30sp</dimen>
+    <dimen name="font_size_lg">40sp</dimen>
+    <dimen name="font_size_xl">60sp</dimen>
+    <dimen name="font_size_xxl">80sp</dimen>
+    <dimen name="font_size_xxxl">100sp</dimen>
+
+    <dimen name="img_tipo_ejercicio_w">160dp</dimen>
+    <dimen name="img_tipo_ejercicio_h">230dp</dimen>
+
+    <dimen name="sale_row_w">160dp</dimen>
+    <dimen name="sale_row_h">230dp</dimen>
+
+    <dimen name="header_home_ico_w">41dp</dimen>
+    <dimen name="header_home_ico_h">30dp</dimen>
+</resources>

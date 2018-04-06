@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    tools:context="cwo.pakidermo.dgom.com.mx.cwo.PaymentActivity">
+
+
+    <ImageView
+        android:id="@+id/img_logo_dark"
+        android:layout_width="@dimen/ico_size"
+        android:layout_height="@dimen/ico_size"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/ico_logo"
+        android:src="@drawable/logo_dark_2x"
+        app:layout_constraintBottom_toTopOf="@+id/layout_title_sales"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_title_sales"
+        android:layout_width="0dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/yoga_training_1_2x"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_dark">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_lg"
+            android:text="@string/lbl_venta_title_row_1"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/color_brillante"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_sm"
+            android:text="@string/lbl_venta_title_row_2"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/color_brillante"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_lg"
+            android:text="@string/lbl_venta_sub_title_row_1"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_lg"
+            android:paddingTop="@dimen/padding_sm"
+            android:text="@string/lbl_venta_sub_title_row_2"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_title_sales">
+
+        <LinearLayout
+            android:id="@+id/list_exercices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:dividerPadding="@dimen/preview_placeholder"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_sm"
+            android:paddingRight="@dimen/padding_sm">
+
+            <LinearLayout
+                android:layout_width="@dimen/sale_row_h"
+                android:layout_height="@dimen/sale_row_h"
+                android:layout_marginRight="@dimen/padding_md"
+                android:layout_weight="1"
+                android:background="@color/color_fondo"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@color/color_brillante_b"
+                    android:paddingBottom="@dimen/padding_xs"
+                    android:paddingTop="@dimen/padding_xs"
+                    android:text="@string/lbl_sale_item_3m"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_sm" />
+
+                <TextView
+                    android:id="@+id/txt_price_3m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/padding_md"
+                    android:text="@string/lbl_sale_item_3m_price"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_size_lg" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:paddingBottom="@dimen/padding_sm"
+                    android:text="@string/lbl_montly"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_size_xs" />
+
+                <TextView
+                    android:id="@+id/txt_precio_3m_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:paddingBottom="@dimen/padding_sm"
+                    android:text="@string/lbl_montly"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_size_xs" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_sm"
+                    android:layout_weight="0"
+                    android:background="@color/color_brillante_b"
+                    android:onClick="buyAction3m"
+                    android:text="@string/lbl_sale_buy"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_sm" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/sale_row_h"
+                android:layout_height="@dimen/sale_row_h"
+                android:layout_marginRight="@dimen/padding_md"
+                android:layout_weight="1"
+                android:background="@color/color_fondo"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@color/color_brillante"
+                    android:paddingBottom="@dimen/padding_xs"
+                    android:paddingTop="@dimen/padding_xs"
+                    android:text="@string/lbl_sale_item_12m"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_sm" />
+
+                <TextView
+                    android:id="@+id/txt_price_12m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/padding_md"
+                    android:text="@string/lbl_sale_item_12m_price"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_size_lg" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:paddingBottom="@dimen/padding_sm"
+                    android:text="@string/lbl_montly"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_size_xs" />
+
+                <TextView
+                    android:id="@+id/txt_precio_12m_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:paddingBottom="@dimen/padding_sm"
+                    android:text="@string/lbl_montly"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/font_size_xs" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_sm"
+                    android:layout_weight="0"
+                    android:background="@color/color_brillante"
+                    android:onClick="buyAction12m"
+                    android:text="@string/lbl_sale_buy"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_sm" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/txt_disclaimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:paddingBottom="@dimen/padding_sm"
+        android:text="@string/payment_disclaimer"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_xs"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+</android.support.constraint.ConstraintLayout>

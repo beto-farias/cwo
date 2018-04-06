@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cwo.pakidermo.dgom.com.mx.cwo.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_brillante"
+            app:popupTheme="@style/PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/txt_content_premium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_blue"
+        android:onClick="showStoreAction"
+        android:paddingBottom="@dimen/padding_sm"
+        android:paddingTop="@dimen/padding_sm"
+        android:text="@string/lbl_get_premium"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_featured_content"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/preview_placeholder"
+        android:background="@drawable/celebrity_javier_robles_2x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_content_premium">
+
+        <ImageView
+            android:id="@+id/img_ico_play"
+            android:layout_width="@dimen/ico_size"
+            android:layout_height="@dimen/ico_size"
+            android:layout_marginBottom="125dp"
+            android:layout_marginEnd="167dp"
+            android:layout_marginStart="167dp"
+            android:layout_marginTop="125dp"
+            android:contentDescription="@string/ico"
+            android:onClick="playFeatureVideoAction"
+            android:src="@drawable/play_button_2x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_day_celeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/lbl_day_celebrity"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_ico_play" />
+
+        <TextView
+            android:id="@+id/txt_celeb_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/lbl_celebrity_name"
+            android:textColor="@color/color_brillante"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_day_celeb" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/lbl_programas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/lbl_programs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_featured_content"
+        />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_programas">
+
+        <LinearLayout
+            android:id="@+id/list_exercices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:dividerPadding="@dimen/preview_placeholder"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_sm"
+            android:paddingRight="@dimen/padding_sm">
+
+            <ImageView
+                android:id="@+id/img_work_office"
+                android:layout_width="@dimen/img_tipo_ejercicio_w"
+                android:layout_height="@dimen/img_tipo_ejercicio_h"
+                android:layout_weight="1"
+                android:onClick="listOfficeWorkoutVideoAction"
+                android:src="@drawable/banner_office_work_out_2x" />
+
+            <ImageView
+                android:id="@+id/img_desafio"
+                android:layout_width="@dimen/img_tipo_ejercicio_w"
+                android:layout_height="@dimen/img_tipo_ejercicio_h"
+                android:layout_weight="1"
+                android:onClick="listDesafiosVideoAction"
+                android:paddingRight="@dimen/padding_sm"
+                android:src="@drawable/banner_desafios_cwo_2x" />
+
+            <ImageView
+                android:id="@+id/img_strech"
+                android:layout_width="@dimen/img_tipo_ejercicio_w"
+                android:layout_height="@dimen/img_tipo_ejercicio_h"
+                android:layout_weight="1"
+                android:onClick="listStrechVideoAction"
+                android:paddingRight="@dimen/padding_sm"
+                android:src="@drawable/banner_streching_2x" />
+
+            <ImageView
+                android:id="@+id/img_tact"
+                android:layout_width="@dimen/img_tipo_ejercicio_w"
+                android:layout_height="@dimen/img_tipo_ejercicio_h"
+                android:layout_weight="1"
+                android:onClick="listTacFitVideoAction"
+                android:paddingRight="@dimen/padding_sm"
+                android:src="@drawable/banner_tacfit_2x" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/btn_debug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="showDebugAction"
+        android:text="@string/lbl_debug"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
