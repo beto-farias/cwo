@@ -35,6 +35,7 @@ import cwo.pakidermo.dgom.com.mx.cwo.db.DatabaseHelper;
 import cwo.pakidermo.dgom.com.mx.cwo.db.UserDataController;
 import cwo.pakidermo.dgom.com.mx.cwo.to.VideoContent;
 import cwo.pakidermo.dgom.com.mx.cwo.utils.VideoContentUtuls;
+import jp.wasabeef.picasso.transformations.CropCircleTransformation;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -110,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Log.d(TAG, AppConstantes.FIREBASE_USER.getPhotoUrl() + "");
             Picasso.with(this)
                     .load(AppConstantes.FIREBASE_USER.getPhotoUrl())
-                    //.networkPolicy(NetworkPolicy.OFFLINE)
+                    .transform(new CropCircleTransformation())
                     .into(userThumnail);
         }
 
@@ -158,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             txtCelebName.setText(vcFeatured.getCelebrity());
             Picasso.with(this)
                     .load(vcFeatured.getPoster())
-                    //.networkPolicy(NetworkPolicy.OFFLINE)
+                    .placeholder(R.drawable.img_video_placeholder)
                     .into(new Target() {
                 @Override
                 public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {

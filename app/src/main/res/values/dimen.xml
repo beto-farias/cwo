@@ -23,6 +23,9 @@ limitations under the License.
     <dimen name="logo_size">100dp</dimen>
     <dimen name="ico_size">50dp</dimen>
     <dimen name="ico_size_s">20dp</dimen>
+    <dimen name="ico_size_m">25dp</dimen>
+
+    <dimen name="profile_pic">80dp</dimen>
 
     <dimen name="padding_xs">5dp</dimen>
     <dimen name="padding_sm">10dp</dimen>
@@ -30,6 +33,8 @@ limitations under the License.
     <dimen name="padding_lg">30dp</dimen>
 
     <dimen name="img_thumnail">90dp</dimen>
+
+    <dimen name="img_exercise_thumnail">130dp</dimen>
 
     <dimen name="preview_placeholder">200dp</dimen>
 

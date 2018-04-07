@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -41,6 +42,7 @@ import cwo.pakidermo.dgom.com.mx.cwo.app.AppConstantes;
 import cwo.pakidermo.dgom.com.mx.cwo.download.util.DownloadReceiver;
 import cwo.pakidermo.dgom.com.mx.cwo.to.VideoContent;
 import cwo.pakidermo.dgom.com.mx.cwo.utils.FileUtil;
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 /**
  * Created by beto on 02/02/18.
@@ -49,6 +51,7 @@ import cwo.pakidermo.dgom.com.mx.cwo.utils.FileUtil;
 public class VideoRecycleAdapter extends  RecyclerView.Adapter<VideoRecycleAdapter.MyHolder> {
 
     private static final String TAG = "VideoRecycleAdapter";
+    private final Transformation transformation = new RoundedCornersTransformation(10, 0);
 
 
     private List<VideoContent> values = new ArrayList<>();
@@ -118,6 +121,13 @@ public class VideoRecycleAdapter extends  RecyclerView.Adapter<VideoRecycleAdapt
             progressDownload = (ProgressBar) rowView.findViewById(R.id.progress_download);
         }
 
+
+
+
+
+
+
+
         public void setData(final VideoContent vc) {
 
             icoLock.setVisibility(View.GONE);
@@ -129,6 +139,8 @@ public class VideoRecycleAdapter extends  RecyclerView.Adapter<VideoRecycleAdapt
             txtTime.setText(vc.getTime());
             Picasso.with(context)
                     .load(vc.getVideo_thumnail())
+                    .transform(transformation)
+                    .placeholder(R.drawable.img_video_placeholder)
                     .into(imageView);
 
             Log.d(TAG,"Thumnail: " + vc.getVideo_thumnail());
@@ -144,7 +156,7 @@ public class VideoRecycleAdapter extends  RecyclerView.Adapter<VideoRecycleAdapt
 
             //TODO------------------------------
             //Si ya pago el usuario puede descargar el video
-            //if(AppConstantes.subscribed){
+            if(AppConstantes.subscribed){
             icoLock.setVisibility(View.GONE);
             //Si ya se descargo el video quitar la opcion de descargar
             if(!FileUtil.videoExists(vc,context)) {
@@ -166,7 +178,7 @@ public class VideoRecycleAdapter extends  RecyclerView.Adapter<VideoRecycleAdapt
                 if (DownloadReceiver.isVideoDownloaded(mActivity, vc.getUiid())) {
                     icoDownload.setVisibility(View.GONE);
                 }
-                //}
+                }
             }
         }
 
