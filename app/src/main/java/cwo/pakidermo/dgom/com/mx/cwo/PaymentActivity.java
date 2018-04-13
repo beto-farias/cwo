@@ -43,6 +43,11 @@ public class PaymentActivity extends Activity   implements PaymentListener.Payme
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
+
+        //analitycs de vistas de la vista de pago
+        Bundle bundle = new Bundle();
+        mFirebaseAnalytics.logEvent("Payment_view",bundle);
+
     }
 
 
@@ -65,15 +70,31 @@ public class PaymentActivity extends Activity   implements PaymentListener.Payme
     public void buyAction3m(View v){
         Log.d(TAG, "Botón comprar Subscripción 3 meses.");
         mPaymentListener.pagarSubscripcion(AppConstantes.SKU_3_MESES);
+
+        //analitycs
+        Bundle bundle = new Bundle();
+        bundle.putString("duration","3 meses");
+        mFirebaseAnalytics.logEvent("Payment_button",bundle);
     }
 
     public void buyAction12m(View v){
         Log.d(TAG, "Botón comprar Subscripción 12 meses.");
         mPaymentListener.pagarSubscripcion(AppConstantes.SKU_12_MESES);
+
+        //analitycs
+        Bundle bundle = new Bundle();
+        bundle.putString("duration","3 meses");
+        mFirebaseAnalytics.logEvent("Payment_button",bundle);
     }
 
     @Override
     public void paymentReceibed(String sku) {
+
+        //analitycs
+        Bundle bundle = new Bundle();
+        bundle.putString("sku",sku);
+        mFirebaseAnalytics.logEvent("Payment_recibed",bundle);
+
         Intent i = new Intent(PaymentActivity.this, MainActivity.class);
         startActivity(i);
         finish();

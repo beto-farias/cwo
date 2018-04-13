@@ -222,7 +222,11 @@ public class SplashActivity extends Activity {
         }
 
         //Verifica que se consulte android y que la version sea diferente
-        if(update.getOs().equalsIgnoreCase(SO) && !update.getVersion().equalsIgnoreCase(versionCode+"")){
+        //if(update.getOs().equalsIgnoreCase(SO) && !update.getVersion().equalsIgnoreCase(versionCode+"")){
+
+        //Si la version que esta publicada en internet es mayor que la version actual
+        if(versionCode < Integer.parseInt(update.getVersion())){
+
             //Si es android y la version del despliegue es diferente pide actualizar la aplicacion
             new AlertDialog.Builder(this)
                     .setTitle(R.string.app_update_title)

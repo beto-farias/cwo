@@ -40,6 +40,7 @@
     <string name="lbl_montly">Mensuales</string>
 
     <string name="lbl_sale_buy">Contratar</string>
+    <string name="lbl_try_7_days">Probar por 7 días</string>
 
     <string name="training_completed">¡Entrenamiento completado!</string>
     <string name="how_you_feel">¿Cómo te sentiste despúes del entrenamiento?</string>
@@ -80,6 +81,7 @@
 
 
     <string name="start_now_for_only">Comienza hoy por sólo</string>
+    <string name="try_now_7_days_free">Pruebala grátis por 7 días</string>
     <string name="txt_continue">Continuar</string>
     <string name="txt_start_value">--</string>
     <string name="txt_continue_without_subscription">Continuar sin suscripción</string>
@@ -108,6 +110,6 @@
 
     <string name="lbl_mi_ejercicio">Actividad</string>
     <string name="precio_total">%1$s %2$s precio total de la suscripción</string>
-    <string name="payment_disclaimer">*Se renovará automáticamente por el periodo indicado</string>
+    <string name="payment_disclaimer">*Cancela sin ningún cargo enel momento que desees antes de que finalicen los 7 días de tú periodo de prueba. Una vez transcurrido este tiepmpo la suscripción seleccionada será cargada a tu cuenta. La suscripción será renovada automáticamente a menos que el servicios sea cancelado al menos 24 hrs antes del termino del periodo contratado.</string>
 
 </resources>

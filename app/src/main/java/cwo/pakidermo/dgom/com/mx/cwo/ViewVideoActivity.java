@@ -54,6 +54,8 @@ public class ViewVideoActivity extends Activity {
     //Analiticos
     private FirebaseAnalytics mFirebaseAnalytics;
 
+    private boolean isFeaturedVideo = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,8 @@ public class ViewVideoActivity extends Activity {
         setContentView(R.layout.activity_view_video);
 
         vc = (VideoContent) getIntent().getSerializableExtra(AppConstantes.VIDEO_EXTRA);
+        isFeaturedVideo = getIntent().getBooleanExtra("IS_FEATURED_VIDEO", false);
+
 
         layoutControls = (ConstraintLayout) findViewById(R.id.layout_controls);
         videoView = (VideoView) findViewById(R.id.video_view);
@@ -300,13 +304,16 @@ public class ViewVideoActivity extends Activity {
                         }
                     });
 
-                    //Si no se ha pagado y el video permite prview
-                    if(!AppConstantes.subscribed && vc.getPayment_type() == AppConstantes.ACCESS_PRIVATE) {
-                        //Verifica que el tiempo de preview no suceda
-                        if (current >= (vc.getPreview_time() / 6)) {
-                            preview = false;
-                            videoView.stopPlayback();
-                            stop = true;
+                    //Si el video es featured no monitorea el tiempo
+                    if(!isFeaturedVideo) {
+                        //Si no se ha pagado y el video permite prview
+                        if (!AppConstantes.subscribed && vc.getPayment_type() == AppConstantes.ACCESS_PRIVATE) {
+                            //Verifica que el tiempo de preview no suceda
+                            if (current >= (vc.getPreview_time() / 6)) {
+                                preview = false;
+                                videoView.stopPlayback();
+                                stop = true;
+                            }
                         }
                     }
 

@@ -3,6 +3,8 @@ package cwo.pakidermo.dgom.com.mx.cwo.db;
 import android.content.Context;
 import android.util.Log;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,13 +30,17 @@ public class FirebaseHelper {
     private DatabaseReference mDatabase;
     private static final Gson gson = new Gson();
     private Context mContext;
-
+    private FirebaseAuth mAuth;
+    private String userEmail;
 
     public FirebaseHelper(Context context){
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         mDatabase = database.getReference("Exercises");
         this.mContext = context;
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        userEmail = currentUser.getEmail().replaceAll("\\.", "_");
     }
 
 
@@ -44,17 +50,20 @@ public class FirebaseHelper {
      * @return si fue almacenado correctamente
      */
     protected boolean saveExercise(Exercise ex){
-        String user = AppConstantes.FIREBASE_USER.getEmail().replaceAll("\\.", "_");
-        Log.d(TAG, user);
-        mDatabase.child(user).push().setValue(ex);
+        //String user = AppConstantes.FIREBASE_USER.getEmail().replaceAll("\\.", "_");
+        Log.d(TAG, userEmail);
+        mDatabase.child(userEmail).push().setValue(ex);
         return true;
     }
 
     protected void getFireBaseUserExercises(){
         final UserDataController udc = new UserDataController(mContext);
-        final String user = AppConstantes.FIREBASE_USER.getEmail().replaceAll("\\.", "_");
-        Log.d(TAG, user);
-        final DatabaseReference userExercise = mDatabase.child(user);
+
+
+
+        //final String user = AppConstantes.FIREBASE_USER.getEmail().replaceAll("\\.", "_");
+        Log.d(TAG, userEmail);
+        final DatabaseReference userExercise = mDatabase.child(userEmail);
 
         // Read from the database
         userExercise.addValueEventListener(new ValueEventListener() {
@@ -73,7 +82,7 @@ public class FirebaseHelper {
                 }
 
                 //Quita el listener una vez que procesa la info
-                mDatabase.child(user).removeEventListener(this);
+                mDatabase.child(userEmail).removeEventListener(this);
             }
 
             @Override

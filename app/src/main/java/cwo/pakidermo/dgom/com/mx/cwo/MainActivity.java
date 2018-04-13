@@ -198,13 +198,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void playFeatureVideoAction(View v){
 
         Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "Main Feature video");
-        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "Feature Video");
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Banner");
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+        bundle.putString("Video",vcFeatured.name);
+        mFirebaseAnalytics.logEvent("Feature_video_play",bundle);
 
         Intent i = new Intent(MainActivity.this, ViewVideoActivity.class);
         i.putExtra(AppConstantes.VIDEO_EXTRA,vcFeatured);
+        i.putExtra("IS_FEATURED_VIDEO",true); //Indica que el video es el featured del dia
         startActivity(i);
     }
 
@@ -216,10 +215,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void listOfficeWorkoutVideoAction(View v){
 
         Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "Main Office workout");
-        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "Office workout");
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Banner");
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+        bundle.putInt("type",AppConstantes.OFFICE_WORKOUT_TYPE);
+        bundle.putString("name","OFFICE_WORKOUT_TYPE");
+        mFirebaseAnalytics.logEvent("Video_list",bundle);
+
 
 
         Intent i = new Intent(MainActivity.this, VideoListActivity.class);
@@ -233,10 +232,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
      */
     public void listDesafiosVideoAction(View v){
         Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "Main Challenge");
-        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "Challenge");
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Banner");
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+        bundle.putInt("type",AppConstantes.CHALLENGES_TYPE);
+        bundle.putString("name","CHALLENGES_TYPE");
+        mFirebaseAnalytics.logEvent("Video_list",bundle);
 
         Intent i = new Intent(MainActivity.this, VideoListActivity.class);
         i.putExtra("list_type", AppConstantes.CHALLENGES_TYPE);
@@ -251,10 +249,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void listStrechVideoAction(View v){
 
         Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "Main Strech");
-        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "Strech");
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Banner");
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+        bundle.putInt("type",AppConstantes.STRECH_TYPE);
+        bundle.putString("name","STRECH_TYPE");
+        mFirebaseAnalytics.logEvent("Video_list",bundle);
 
         Intent i = new Intent(MainActivity.this, VideoListActivity.class);
         i.putExtra("list_type", AppConstantes.STRECH_TYPE);
@@ -267,10 +264,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
      */
     public void listTacFitVideoAction(View v){
         Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "Main Tactfit");
-        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "Tactfit");
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Banner");
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+        bundle.putInt("type",AppConstantes.TACTFIT_TYPE);
+        bundle.putString("name","TACTFIT_TYPE");
+        mFirebaseAnalytics.logEvent("Video_list",bundle);
 
         Intent i = new Intent(MainActivity.this, VideoListActivity.class);
         i.putExtra("list_type", AppConstantes.TACTFIT_TYPE);

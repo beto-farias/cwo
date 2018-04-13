@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/start_now_for_only"
+        android:text="@string/try_now_7_days_free"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="@dimen/font_size_md"

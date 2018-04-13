@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/img_exercise_thumnail"
         android:layout_width="0dp"
-        android:layout_height="@dimen/img_thumnail"
+        android:layout_height="@dimen/img_exercise_thumnail"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:scaleType="centerCrop"
@@ -23,22 +23,22 @@
         android:id="@+id/txt_exercise_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:text="Nombre del ejercicio"
         android:textColor="@color/white"
         android:textSize="@dimen/font_size_sm"
-        app:layout_constraintStart_toStartOf="@+id/img_exercise_thumnail"
-        app:layout_constraintTop_toTopOf="@+id/img_exercise_thumnail" />
+        app:layout_constraintBottom_toTopOf="@+id/txt_exercise_date"
+        app:layout_constraintStart_toStartOf="@+id/img_exercise_thumnail" />
 
     <TextView
         android:id="@+id/txt_exercise_date"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:text="01 enero 2018"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/img_exercise_thumnail"
-        app:layout_constraintTop_toBottomOf="@+id/txt_exercise_name" />
+        app:layout_constraintBottom_toBottomOf="@+id/img_exercise_thumnail"
+        app:layout_constraintStart_toStartOf="@+id/img_exercise_thumnail" />
 </android.support.constraint.ConstraintLayout>
